@@ -1,13 +1,12 @@
 import React from 'react';
 import Herosection from "@/app/components/Herosection";
 
-const Page = () => {
+const home = () => {
     return (
         <>
-            <Herosection title={"Let's Watch Movie Together"} imageUrl={"/image1.jpg"}/>
-
+            <Herosection/>
         </>
     );
 };
 
-export default Page;
+export default home;

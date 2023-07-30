@@ -1,7 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import Header from "@/app/components/Header";
+
+import { Mulish } from 'next/font/google';
+import Footer from "@/app/components/Footer";
+
+const mulish = Mulish({
+    weight: '400',
+    subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={mulish.className}>
+      <Header/>{children}
+      {/* eslint-disable-next-line react/jsx-no-undef */}
+<Footer/>
+</body>
     </html>
   )
 }
